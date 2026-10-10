@@ -1,0 +1,138 @@
+/* Apple HIG Typography & Root Variables */
+:root {
+    --apple-system-font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --accent-color: #007AFF; /* Apple Blue */
+    --accent-hover: #0056b3;
+    --text-primary: #1C1C1E;
+    --text-secondary: #8E8E93;
+    --bg-primary: #F2F2F7;
+    --card-bg: #FFFFFF;
+    --success-color: #34C759;
+    --error-color: #FF3B30;
+    --glass-bg: rgba(255, 255, 255, 0.75);
+    --glass-border: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-primary: #FFFFFF;
+        --text-secondary: #EBEBF5;
+        --bg-primary: #000000;
+        --card-bg: #1C1C1E;
+        --glass-bg: rgba(28, 28, 30, 0.75);
+        --glass-border: rgba(255, 255, 255, 0.15);
+    }
+}
+
+/* Base Typography */
+html, body, [class*="css"]  {
+    font-family: var(--apple-system-font) !important;
+}
+
+/* Main Container Background */
+.stApp {
+    background-color: var(--bg-primary);
+}
+
+/* Liquid Glass: Header */
+header[data-testid="stHeader"] {
+    background-color: var(--glass-bg) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-bottom: 0.5px solid var(--glass-border);
+}
+
+/* Liquid Glass: Tabs Container */
+div[data-testid="stTabs"] {
+    background-color: transparent !important;
+}
+
+div[data-testid="stTabs"] button {
+    font-weight: 500 !important;
+    font-size: 16px !important;
+}
+
+/* Buttons */
+button[kind="primary"], button[data-testid="baseButton-primary"] {
+    background-color: var(--accent-color) !important;
+    color: white !important;
+    border-radius: 20px !important; /* Pill shape */
+    border: none !important;
+    padding: 10px 24px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 14px 0 rgba(0, 122, 255, 0.39) !important;
+    transition: all 0.2s ease !important;
+}
+
+button[kind="primary"]:hover, button[data-testid="baseButton-primary"]:hover {
+    background-color: var(--accent-hover) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(0, 122, 255, 0.23) !important;
+}
+
+button[kind="secondary"], button[data-testid="baseButton-secondary"] {
+    background-color: var(--card-bg) !important;
+    color: var(--accent-color) !important;
+    border-radius: 20px !important;
+    border: 1px solid var(--glass-border) !important;
+    padding: 10px 24px !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease !important;
+}
+
+button[kind="secondary"]:hover, button[data-testid="baseButton-secondary"]:hover {
+    background-color: var(--bg-primary) !important;
+    border: 1px solid var(--accent-color) !important;
+}
+
+/* Citation Cards */
+.citation-card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    padding: 16px 20px;
+    margin: 12px 0;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--glass-border);
+    transition: transform 0.2s ease;
+}
+
+.citation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.citation-text {
+    font-size: 15px;
+    color: var(--text-primary);
+    line-height: 1.5;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.citation-meta {
+    font-size: 13px;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+/* Inputs */
+.stTextInput input, .stTextArea textarea {
+    border-radius: 12px !important;
+    border: 1px solid var(--glass-border) !important;
+    background-color: var(--card-bg) !important;
+    padding: 12px 16px !important;
+    font-size: 16px !important; /* Prevents iOS zoom */
+}
+
+.stTextInput input:focus, .stTextArea textarea:focus {
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.2) !important;
+}
+
+/* Spinner / Loading */
+.stSpinner > div > div {
+    border-color: var(--accent-color) transparent transparent transparent !important;
+}

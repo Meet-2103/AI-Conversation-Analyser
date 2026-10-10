@@ -1,0 +1,292 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 2200" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f0c29"/>
+      <stop offset="50%" stop-color="#141430"/>
+      <stop offset="100%" stop-color="#0a0a1a"/>
+    </linearGradient>
+    <linearGradient id="presentationGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6a3de8"/>
+      <stop offset="100%" stop-color="#8e5ff5"/>
+    </linearGradient>
+    <linearGradient id="coreGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1565c0"/>
+      <stop offset="100%" stop-color="#1e88e5"/>
+    </linearGradient>
+    <linearGradient id="infraGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00695c"/>
+      <stop offset="100%" stop-color="#00897b"/>
+    </linearGradient>
+    <linearGradient id="domainGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4e342e"/>
+      <stop offset="100%" stop-color="#6d4c41"/>
+    </linearGradient>
+    <linearGradient id="startGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#b71c1c"/>
+      <stop offset="100%" stop-color="#e53935"/>
+    </linearGradient>
+    <linearGradient id="decisionGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e65100"/>
+      <stop offset="100%" stop-color="#ff6d00"/>
+    </linearGradient>
+    <linearGradient id="verifyGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1b5e20"/>
+      <stop offset="100%" stop-color="#388e3c"/>
+    </linearGradient>
+    <linearGradient id="outputGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4a148c"/>
+      <stop offset="100%" stop-color="#7b1fa2"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="strongGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64b5f6"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#81c784"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e57373"/>
+    </marker>
+    <marker id="arrowWhite" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ccc"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ffb74d"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ce93d8"/>
+    </marker>
+  </defs>
+
+  <!-- BACKGROUND -->
+  <rect width="1400" height="2200" fill="url(#bgGrad)"/>
+
+  <!-- TITLE -->
+  <rect x="200" y="18" width="1000" height="68" rx="16" fill="#ffffff10" stroke="#6a3de8" stroke-width="1.5" filter="url(#glow)"/>
+  <text x="700" y="52" text-anchor="middle" font-size="26" font-weight="800" fill="#e8d5ff" letter-spacing="1">AI Transcript Analysis - System Flowchart</text>
+  <text x="700" y="76" text-anchor="middle" font-size="13" fill="#9e86c8" letter-spacing="2">Clean Architecture - RAG Pipeline - Hallucination Verification</text>
+
+  <!-- LEGEND -->
+  <rect x="30" y="108" width="200" height="215" rx="10" fill="#ffffff08" stroke="#ffffff20" stroke-width="1"/>
+  <text x="130" y="130" text-anchor="middle" font-size="12" font-weight="700" fill="#ccc" letter-spacing="1">LEGEND</text>
+  <rect x="44" y="140" width="16" height="16" rx="3" fill="url(#presentationGrad)"/>
+  <text x="68" y="153" font-size="11" fill="#bbb">Presentation Layer</text>
+  <rect x="44" y="163" width="16" height="16" rx="3" fill="url(#coreGrad)"/>
+  <text x="68" y="176" font-size="11" fill="#bbb">Core / Business Logic</text>
+  <rect x="44" y="186" width="16" height="16" rx="3" fill="url(#infraGrad)"/>
+  <text x="68" y="199" font-size="11" fill="#bbb">Infrastructure</text>
+  <rect x="44" y="209" width="16" height="16" rx="3" fill="url(#domainGrad)"/>
+  <text x="68" y="222" font-size="11" fill="#bbb">Domain Models</text>
+  <rect x="44" y="232" width="16" height="16" rx="3" fill="url(#verifyGrad)"/>
+  <text x="68" y="245" font-size="11" fill="#bbb">Verification Step</text>
+  <rect x="44" y="255" width="16" height="16" rx="3" fill="url(#outputGrad)"/>
+  <text x="68" y="268" font-size="11" fill="#bbb">Output / Display</text>
+
+  <!-- SECTION A: STARTUP -->
+  <text x="700" y="122" text-anchor="middle" font-size="14" font-weight="700" fill="#aaa" letter-spacing="3">SECTION A: APPLICATION STARTUP AND DATA INGESTION</text>
+  <ellipse cx="700" cy="162" rx="130" ry="32" fill="url(#startGrad)" filter="url(#shadow)"/>
+  <text x="700" y="158" text-anchor="middle" font-size="15" font-weight="700" fill="white">App Starts</text>
+  <text x="700" y="176" text-anchor="middle" font-size="10" fill="#ffcdd2">streamlit_app.py - main()</text>
+  <line x1="700" y1="194" x2="700" y2="222" stroke="#ccc" stroke-width="2" marker-end="url(#arrowWhite)"/>
+  <rect x="540" y="222" width="320" height="56" rx="10" fill="url(#presentationGrad)" filter="url(#shadow)"/>
+  <text x="700" y="244" text-anchor="middle" font-size="13" font-weight="700" fill="white">Streamlit UI Initialises</text>
+  <text x="700" y="263" text-anchor="middle" font-size="10" fill="#e0d0ff">Set page config - Load style.css - Show title</text>
+  <line x1="700" y1="278" x2="700" y2="306" stroke="#ccc" stroke-width="2" marker-end="url(#arrowWhite)"/>
+  <rect x="540" y="306" width="320" height="56" rx="10" fill="url(#coreGrad)" filter="url(#shadow)"/>
+  <text x="700" y="328" text-anchor="middle" font-size="13" font-weight="700" fill="white">ingest_data() Called</text>
+  <text x="700" y="347" text-anchor="middle" font-size="10" fill="#bbdefb">core/ingestion.py</text>
+  <line x1="700" y1="362" x2="700" y2="390" stroke="#ccc" stroke-width="2" marker-end="url(#arrowWhite)"/>
+  <polygon points="700,390 840,430 700,470 560,430" fill="url(#decisionGrad)" filter="url(#shadow)"/>
+  <text x="700" y="426" text-anchor="middle" font-size="13" font-weight="700" fill="white">SQLite DB</text>
+  <text x="700" y="444" text-anchor="middle" font-size="13" font-weight="700" fill="white">Empty?</text>
+  <line x1="840" y1="430" x2="960" y2="430" stroke="#81c784" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="900" y="424" text-anchor="middle" font-size="11" font-weight="700" fill="#81c784">YES</text>
+  <line x1="700" y1="470" x2="700" y2="506" stroke="#e57373" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <text x="720" y="495" font-size="11" font-weight="700" fill="#e57373">NO</text>
+  <rect x="540" y="506" width="320" height="48" rx="10" fill="#2a1f1f" stroke="#e57373" stroke-width="1.5"/>
+  <text x="700" y="526" text-anchor="middle" font-size="12" font-weight="600" fill="#ef9a9a">Skip Ingestion</text>
+  <text x="700" y="545" text-anchor="middle" font-size="10" fill="#888">Transcripts already in DB</text>
+  <rect x="960" y="406" width="240" height="48" rx="10" fill="url(#coreGrad)" filter="url(#shadow)"/>
+  <text x="1080" y="426" text-anchor="middle" font-size="12" font-weight="700" fill="white">Scan data/ Folder</text>
+  <text x="1080" y="445" text-anchor="middle" font-size="10" fill="#bbdefb">Find *expert*.txt files</text>
+  <line x1="1080" y1="454" x2="1080" y2="482" stroke="#81c784" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <rect x="960" y="482" width="240" height="48" rx="10" fill="url(#coreGrad)" filter="url(#shadow)"/>
+  <text x="1080" y="502" text-anchor="middle" font-size="12" font-weight="700" fill="white">TranscriptParser.parse()</text>
+  <text x="1080" y="521" text-anchor="middle" font-size="10" fill="#bbdefb">Extract: name, role, market, chunks</text>
+  <line x1="1080" y1="530" x2="1080" y2="558" stroke="#81c784" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <rect x="960" y="558" width="240" height="48" rx="10" fill="url(#infraGrad)" filter="url(#shadow)"/>
+  <text x="1080" y="578" text-anchor="middle" font-size="12" font-weight="700" fill="white">Save to SQLite</text>
+  <text x="1080" y="597" text-anchor="middle" font-size="10" fill="#b2dfdb">transcript_repository.save()</text>
+  <line x1="1080" y1="606" x2="1080" y2="634" stroke="#81c784" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <rect x="960" y="634" width="240" height="48" rx="10" fill="url(#infraGrad)" filter="url(#shadow)"/>
+  <text x="1080" y="654" text-anchor="middle" font-size="12" font-weight="700" fill="white">Add Chunks to ChromaDB</text>
+  <text x="1080" y="673" text-anchor="middle" font-size="10" fill="#b2dfdb">vector_store.add_transcripts()</text>
+  <line x1="960" y1="658" x2="860" y2="658" stroke="#81c784" stroke-width="2"/>
+  <line x1="860" y1="658" x2="860" y2="554" stroke="#81c784" stroke-width="2"/>
+  <line x1="860" y1="554" x2="862" y2="554" stroke="#81c784" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <rect x="540" y="554" width="320" height="56" rx="10" fill="url(#coreGrad)" filter="url(#shadow)"/>
+  <text x="700" y="576" text-anchor="middle" font-size="13" font-weight="700" fill="white">QAEngine Initialised</text>
+  <text x="700" y="595" text-anchor="middle" font-size="10" fill="#bbdefb">LLMClient - VectorStore - TranscriptRepository</text>
+
+  <!-- SECTION B: UI TABS -->
+  <line x1="700" y1="610" x2="700" y2="640" stroke="#ccc" stroke-width="2" marker-end="url(#arrowWhite)"/>
+  <text x="700" y="658" text-anchor="middle" font-size="14" font-weight="700" fill="#aaa" letter-spacing="3">SECTION B: USER INTERACTION</text>
+  <rect x="200" y="668" width="1000" height="58" rx="12" fill="#ffffff0c" stroke="#6a3de880" stroke-width="1.5"/>
+  <rect x="214" y="678" width="300" height="38" rx="8" fill="url(#presentationGrad)" filter="url(#glow)"/>
+  <text x="364" y="694" text-anchor="middle" font-size="12" font-weight="700" fill="white">Tab 1: Interview Guide</text>
+  <rect x="550" y="678" width="300" height="38" rx="8" fill="url(#presentationGrad)"/>
+  <text x="700" y="694" text-anchor="middle" font-size="12" font-weight="700" fill="white">Tab 2: Cross-Call Synthesis</text>
+  <rect x="886" y="678" width="300" height="38" rx="8" fill="url(#presentationGrad)"/>
+  <text x="1036" y="694" text-anchor="middle" font-size="12" font-weight="700" fill="white">Tab 3: Free Q and A</text>
+  <line x1="364" y1="726" x2="364" y2="762" stroke="#9c7de8" stroke-width="2" marker-end="url(#arrowPurple)"/>
+  <line x1="700" y1="726" x2="700" y2="762" stroke="#9c7de8" stroke-width="2" marker-end="url(#arrowPurple)"/>
+  <line x1="1036" y1="726" x2="1036" y2="762" stroke="#9c7de8" stroke-width="2" marker-end="url(#arrowPurple)"/>
+
+  <!-- SECTION C: THREE FLOWS -->
+  <!-- Flow 1 -->
+  <rect x="60" y="762" width="560" height="56" rx="10" fill="url(#coreGrad)" filter="url(#shadow)"/>
+  <text x="340" y="784" text-anchor="middle" font-size="13" font-weight="700" fill="white">Read interview_guide.txt</text>
+  <text x="340" y="803" text-anchor="middle" font-size="10" fill="#bbdefb">Parse numbered questions from file</text>
+  <line x1="340" y1="818" x2="340" y2="846" stroke="#64b5f6" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <rect x="60" y="846" width="560" height="56" rx="10" fill="url(#coreGrad)" filter="url(#shadow)"/>
+  <text x="340" y="868" text-anchor="middle" font-size="13" font-weight="700" fill="white">Loop: answer_question(q, limit=8)</text>
+  <text x="340" y="887" text-anchor="middle" font-size="10" fill="#bbdefb">QAEngine.answer_interview_guide() for each question</text>
+
+  <!-- Flow 2 -->
+  <rect x="440" y="762" width="520" height="56" rx="10" fill="url(#coreGrad)" filter="url(#shadow)"/>
+  <text x="700" y="784" text-anchor="middle" font-size="13" font-weight="700" fill="white">Fetch ALL Transcripts from SQLite</text>
+  <text x="700" y="803" text-anchor="middle" font-size="10" fill="#bbdefb">transcript_repo.get_all()</text>
+  <line x1="700" y1="818" x2="700" y2="846" stroke="#64b5f6" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <rect x="440" y="846" width="520" height="56" rx="10" fill="url(#infraGrad)" filter="url(#shadow)"/>
+  <text x="700" y="868" text-anchor="middle" font-size="13" font-weight="700" fill="white">LLM: synthesize_themes(transcripts)</text>
+  <text x="700" y="887" text-anchor="middle" font-size="10" fill="#b2dfdb">Gemini identifies common themes and disagreements</text>
+
+  <!-- Flow 3 -->
+  <rect x="970" y="762" width="380" height="56" rx="10" fill="url(#presentationGrad)" filter="url(#shadow)"/>
+  <text x="1160" y="784" text-anchor="middle" font-size="13" font-weight="700" fill="white">User Types Question</text>
+  <text x="1160" y="803" text-anchor="middle" font-size="10" fill="#e0d0ff">st.text_input() - user_q</text>
+  <line x1="1160" y1="818" x2="1160" y2="846" stroke="#ce93d8" stroke-width="2" marker-end="url(#arrowPurple)"/>
+  <rect x="970" y="846" width="380" height="56" rx="10" fill="url(#coreGrad)" filter="url(#shadow)"/>
+  <text x="1160" y="868" text-anchor="middle" font-size="13" font-weight="700" fill="white">answer_question(user_q, limit=5)</text>
+  <text x="1160" y="887" text-anchor="middle" font-size="10" fill="#bbdefb">QAEngine.answer_question()</text>
+
+  <!-- SECTION D: RAG PIPELINE -->
+  <text x="700" y="930" text-anchor="middle" font-size="14" font-weight="700" fill="#aaa" letter-spacing="3">SECTION D: RAG PIPELINE (QA Flow)</text>
+  <line x1="340" y1="902" x2="340" y2="940" stroke="#64b5f6" stroke-width="2"/>
+  <line x1="340" y1="940" x2="700" y2="940" stroke="#64b5f6" stroke-width="2"/>
+  <line x1="1160" y1="902" x2="1160" y2="940" stroke="#64b5f6" stroke-width="2"/>
+  <line x1="1160" y1="940" x2="700" y2="940" stroke="#64b5f6" stroke-width="2"/>
+  <line x1="700" y1="940" x2="700" y2="960" stroke="#64b5f6" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <rect x="430" y="960" width="540" height="56" rx="10" fill="url(#infraGrad)" filter="url(#shadow)"/>
+  <text x="700" y="982" text-anchor="middle" font-size="13" font-weight="700" fill="white">Semantic Search - ChromaDB</text>
+  <text x="700" y="1001" text-anchor="middle" font-size="10" fill="#b2dfdb">vector_store.search(query, limit) - top-N matching chunks</text>
+  <line x1="700" y1="1016" x2="700" y2="1044" stroke="#81c784" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <rect x="430" y="1044" width="540" height="56" rx="10" fill="url(#coreGrad)" filter="url(#shadow)"/>
+  <text x="700" y="1066" text-anchor="middle" font-size="13" font-weight="700" fill="white">Build Context String</text>
+  <text x="700" y="1085" text-anchor="middle" font-size="10" fill="#bbdefb">Chunk text - timestamp - speaker - expert_name formatted</text>
+  <line x1="700" y1="1100" x2="700" y2="1128" stroke="#81c784" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <rect x="430" y="1128" width="540" height="56" rx="10" fill="url(#infraGrad)" filter="url(#shadow)"/>
+  <text x="700" y="1150" text-anchor="middle" font-size="13" font-weight="700" fill="white">Fetch Raw Transcript Text - SQLite</text>
+  <text x="700" y="1169" text-anchor="middle" font-size="10" fill="#b2dfdb">transcript_repo.get_raw_text_by_expert(name)</text>
+  <line x1="700" y1="1184" x2="700" y2="1212" stroke="#81c784" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <rect x="430" y="1212" width="540" height="60" rx="10" fill="url(#infraGrad)" filter="url(#shadow)"/>
+  <text x="700" y="1234" text-anchor="middle" font-size="13" font-weight="700" fill="white">LLM: ask_question(question, context)</text>
+  <text x="700" y="1252" text-anchor="middle" font-size="10" fill="#b2dfdb">Gemini via LangChain - ChatPromptTemplate - PydanticOutputParser</text>
+  <text x="700" y="1266" text-anchor="middle" font-size="10" fill="#80cbc4">Returns: QAAnswer with question, answer, citations list</text>
+
+  <!-- SECTION E: VERIFICATION -->
+  <line x1="700" y1="1272" x2="700" y2="1302" stroke="#ffb74d" stroke-width="2" marker-end="url(#arrowOrange)"/>
+  <text x="700" y="1318" text-anchor="middle" font-size="14" font-weight="700" fill="#aaa" letter-spacing="3">SECTION E: HALLUCINATION VERIFICATION</text>
+  <rect x="430" y="1328" width="540" height="56" rx="10" fill="url(#verifyGrad)" filter="url(#shadow)"/>
+  <text x="700" y="1350" text-anchor="middle" font-size="13" font-weight="700" fill="white">QuoteVerifier.verify_citations()</text>
+  <text x="700" y="1369" text-anchor="middle" font-size="10" fill="#c8e6c9">core/verification.py - for each Citation in QAAnswer.citations</text>
+  <line x1="700" y1="1384" x2="700" y2="1412" stroke="#ffb74d" stroke-width="2" marker-end="url(#arrowOrange)"/>
+  <polygon points="700,1412 870,1452 700,1492 530,1452" fill="url(#decisionGrad)" filter="url(#shadow)"/>
+  <text x="700" y="1448" text-anchor="middle" font-size="13" font-weight="700" fill="white">Quote found in</text>
+  <text x="700" y="1466" text-anchor="middle" font-size="13" font-weight="700" fill="white">raw transcript?</text>
+  <line x1="530" y1="1452" x2="400" y2="1452" stroke="#81c784" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="465" y="1444" text-anchor="middle" font-size="11" font-weight="700" fill="#81c784">YES</text>
+  <rect x="210" y="1432" width="190" height="40" rx="8" fill="url(#verifyGrad)" filter="url(#shadow)"/>
+  <text x="305" y="1452" text-anchor="middle" font-size="12" font-weight="700" fill="white">Verified</text>
+  <text x="305" y="1468" text-anchor="middle" font-size="10" fill="#c8e6c9">is_verified = True</text>
+  <line x1="870" y1="1452" x2="1000" y2="1452" stroke="#e57373" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <text x="935" y="1444" text-anchor="middle" font-size="11" font-weight="700" fill="#e57373">NO</text>
+  <rect x="1000" y="1432" width="220" height="40" rx="8" fill="#b71c1c" filter="url(#shadow)"/>
+  <text x="1110" y="1452" text-anchor="middle" font-size="12" font-weight="700" fill="white">Hallucination Detected</text>
+  <text x="1110" y="1468" text-anchor="middle" font-size="10" fill="#ef9a9a">is_verified = False</text>
+  <line x1="305" y1="1472" x2="305" y2="1540" stroke="#81c784" stroke-width="2"/>
+  <line x1="305" y1="1540" x2="700" y2="1540" stroke="#81c784" stroke-width="2"/>
+  <line x1="1110" y1="1472" x2="1110" y2="1540" stroke="#e57373" stroke-width="2"/>
+  <line x1="1110" y1="1540" x2="700" y2="1540" stroke="#e57373" stroke-width="2"/>
+  <line x1="700" y1="1540" x2="700" y2="1560" stroke="#ccc" stroke-width="2" marker-end="url(#arrowWhite)"/>
+
+  <!-- SECTION F: DISPLAY -->
+  <text x="700" y="1578" text-anchor="middle" font-size="14" font-weight="700" fill="#aaa" letter-spacing="3">SECTION F: DISPLAY RESULTS</text>
+  <rect x="430" y="1588" width="540" height="56" rx="10" fill="url(#outputGrad)" filter="url(#shadow)"/>
+  <text x="700" y="1610" text-anchor="middle" font-size="13" font-weight="700" fill="white">QAAnswer Returned to Streamlit UI</text>
+  <text x="700" y="1629" text-anchor="middle" font-size="10" fill="#e1bee7">answer.answer (text) - answer.citations list</text>
+  <line x1="700" y1="1644" x2="700" y2="1672" stroke="#ccc" stroke-width="2" marker-end="url(#arrowWhite)"/>
+  <rect x="430" y="1672" width="540" height="56" rx="10" fill="url(#presentationGrad)" filter="url(#shadow)"/>
+  <text x="700" y="1694" text-anchor="middle" font-size="13" font-weight="700" fill="white">st.write(answer.answer)</text>
+  <text x="700" y="1713" text-anchor="middle" font-size="10" fill="#e0d0ff">Render AI answer text in the UI</text>
+  <line x1="700" y1="1728" x2="700" y2="1756" stroke="#ccc" stroke-width="2" marker-end="url(#arrowWhite)"/>
+  <rect x="430" y="1756" width="540" height="72" rx="10" fill="url(#presentationGrad)" filter="url(#shadow)"/>
+  <text x="700" y="1778" text-anchor="middle" font-size="13" font-weight="700" fill="white">For Each Citation: Render Citation Card</text>
+  <text x="700" y="1796" text-anchor="middle" font-size="11" fill="#e0d0ff">Check mark: is_verified = True</text>
+  <text x="700" y="1814" text-anchor="middle" font-size="11" fill="#ef9a9a">Cross mark: is_verified = False (Hallucination)</text>
+  <line x1="700" y1="1828" x2="700" y2="1856" stroke="#ccc" stroke-width="2" marker-end="url(#arrowWhite)"/>
+  <rect x="430" y="1856" width="540" height="56" rx="10" fill="url(#infraGrad)" filter="url(#shadow)"/>
+  <text x="700" y="1878" text-anchor="middle" font-size="13" font-weight="700" fill="white">Cross-Call Synthesis: st.write(synthesis)</text>
+  <text x="700" y="1897" text-anchor="middle" font-size="10" fill="#b2dfdb">Themes - Agreements - Disagreements (Tab 2 only)</text>
+  <line x1="700" y1="1912" x2="700" y2="1940" stroke="#ccc" stroke-width="2" marker-end="url(#arrowWhite)"/>
+
+  <!-- END -->
+  <ellipse cx="700" cy="1975" rx="160" ry="36" fill="url(#startGrad)" filter="url(#strongGlow)"/>
+  <text x="700" y="1971" text-anchor="middle" font-size="15" font-weight="700" fill="white">Awaiting Next User Action</text>
+  <text x="700" y="1990" text-anchor="middle" font-size="10" fill="#ffcdd2">User may click another button or change tabs</text>
+
+  <!-- Loop back dashed arrow -->
+  <line x1="860" y1="1975" x2="1320" y2="1975" stroke="#6a3de860" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <line x1="1320" y1="1975" x2="1320" y2="716" stroke="#6a3de860" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <line x1="1320" y1="716" x2="1200" y2="716" stroke="#6a3de860" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrowPurple)"/>
+  <text x="1345" y="1340" font-size="11" fill="#6a3de8" font-style="italic" transform="rotate(-90 1345 1340)">User loops back to UI</text>
+
+  <!-- INFRASTRUCTURE SIDEBAR -->
+  <rect x="30" y="320" width="200" height="310" rx="10" fill="#ffffff08" stroke="#00897b50" stroke-width="1.5"/>
+  <text x="130" y="342" text-anchor="middle" font-size="12" font-weight="700" fill="#80cbc4" letter-spacing="1">INFRASTRUCTURE</text>
+  <text x="130" y="360" text-anchor="middle" font-size="11" font-weight="700" fill="#80cbc4">COMPONENTS</text>
+  <rect x="44" y="368" width="172" height="36" rx="6" fill="url(#infraGrad)"/>
+  <text x="130" y="383" text-anchor="middle" font-size="10" font-weight="600" fill="white">SQLiteTranscriptRepository</text>
+  <text x="130" y="398" text-anchor="middle" font-size="9" fill="#b2dfdb">meet_project.db</text>
+  <rect x="44" y="412" width="172" height="36" rx="6" fill="url(#infraGrad)"/>
+  <text x="130" y="428" text-anchor="middle" font-size="11" font-weight="600" fill="white">ChromaVectorStore</text>
+  <text x="130" y="443" text-anchor="middle" font-size="9" fill="#b2dfdb">chroma_db/</text>
+  <rect x="44" y="456" width="172" height="36" rx="6" fill="url(#infraGrad)"/>
+  <text x="130" y="472" text-anchor="middle" font-size="11" font-weight="600" fill="white">GoogleLLMClient</text>
+  <text x="130" y="487" text-anchor="middle" font-size="9" fill="#b2dfdb">Gemini via LangChain</text>
+  <rect x="44" y="500" width="172" height="36" rx="6" fill="url(#infraGrad)"/>
+  <text x="130" y="516" text-anchor="middle" font-size="11" font-weight="600" fill="white">Container (DI)</text>
+  <text x="130" y="531" text-anchor="middle" font-size="9" fill="#b2dfdb">Singleton factory</text>
+  <rect x="44" y="544" width="172" height="36" rx="6" fill="url(#infraGrad)"/>
+  <text x="130" y="560" text-anchor="middle" font-size="11" font-weight="600" fill="white">Logger</text>
+  <text x="130" y="575" text-anchor="middle" font-size="9" fill="#b2dfdb">get_logger(__name__)</text>
+  <rect x="44" y="588" width="172" height="36" rx="6" fill="url(#domainGrad)"/>
+  <text x="130" y="604" text-anchor="middle" font-size="11" font-weight="600" fill="white">Domain Models</text>
+  <text x="130" y="619" text-anchor="middle" font-size="9" fill="#d7ccc8">Transcript - Citation - QAAnswer</text>
+
+  <!-- FOOTER -->
+  <line x1="100" y1="2060" x2="1300" y2="2060" stroke="#ffffff15" stroke-width="1"/>
+  <text x="700" y="2082" text-anchor="middle" font-size="11" fill="#555">Clean Architecture: Domain to Core to Infrastructure to Presentation</text>
+  <text x="700" y="2100" text-anchor="middle" font-size="11" fill="#555">Google Gemini (LangChain) - ChromaDB (Vector Search) - SQLite (Persistence) - Streamlit (UI)</text>
+  <text x="700" y="2120" text-anchor="middle" font-size="10" fill="#444">docs/flowchart.svg</text>
+</svg>

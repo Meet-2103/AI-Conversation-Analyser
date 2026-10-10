@@ -1,0 +1,30 @@
+[project]
+name = "meet-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Meet", email = "" }
+]
+requires-python = ">=3.13"
+
+dependencies = [
+    "chromadb>=1.5.9",
+    "langchain>=1.4.2",
+    "langchain-google-genai>=4.4.0",
+    "pydantic>=2.13.5",
+    "pydantic-settings>=2.15.0",
+    "pytest>=9.1.1",
+    "streamlit>=1.64.0",
+]
+
+[project.scripts]
+meet-project = "meet_project:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
